@@ -1,9 +1,9 @@
 package com.yuenwk.tiny.service.impl;
 
+import com.yuenwk.common.mybatis.BaseServiceImpl;
 import com.yuenwk.tiny.entity.SmMenu;
 import com.yuenwk.tiny.mapper.SmMenuMapper;
 import com.yuenwk.tiny.service.ISmMenuService;
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
 /**
@@ -15,6 +15,6 @@ import org.springframework.stereotype.Service;
  * @since 2022-07-03
  */
 @Service
-public class SmMenuServiceImpl extends ServiceImpl<SmMenuMapper, SmMenu> implements ISmMenuService {
+public class SmMenuServiceImpl extends BaseServiceImpl<SmMenuMapper, SmMenu> implements ISmMenuService {
 
 }

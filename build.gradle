@@ -25,7 +25,7 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok:1.18.24'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     runtimeOnly 'org.postgresql:postgresql'
-    implementation 'com.baomidou:mybatis-plus:3.5.2'
+    implementation 'com.baomidou:mybatis-plus-boot-starter:3.5.2'
     implementation 'com.github.pagehelper:pagehelper-spring-boot-starter:1.4.2'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.springframework:spring-webflux'

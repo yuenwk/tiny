@@ -1,7 +1,7 @@
 package com.yuenwk.tiny.service;
 
+import com.yuenwk.common.mybatis.IBaseService;
 import com.yuenwk.tiny.entity.SmRoleMenuRelation;
-import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
  * <p>
@@ -11,6 +11,6 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @author yuenwk
  * @since 2022-07-03
  */
-public interface ISmRoleMenuRelationService extends IService<SmRoleMenuRelation> {
+public interface ISmRoleMenuRelationService extends IBaseService<SmRoleMenuRelation> {
 
 }

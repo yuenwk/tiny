@@ -1,8 +1,7 @@
 package com.yuenwk.tiny.controller;
 
-import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
-import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.yuenwk.common.api.ResultVO;
+import com.yuenwk.common.mybatis.BaseController;
 import com.yuenwk.common.page.PageParam;
 import com.yuenwk.common.page.PageVO;
 import com.yuenwk.tiny.entity.SmAdmin;
@@ -10,8 +9,6 @@ import com.yuenwk.tiny.service.ISmAdminService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import javax.annotation.Resource;
 
 /**
  * <p>
@@ -23,20 +20,11 @@ import javax.annotation.Resource;
  */
 @RestController
 @RequestMapping("/sm/admin")
-public class SmAdminController {
-
-    @Resource
-    private ISmAdminService adminService;
+public class SmAdminController extends BaseController<SmAdmin, ISmAdminService> {
 
     @GetMapping
     public ResultVO<PageVO<SmAdmin>> list(PageParam<SmAdmin> param) {
-        return ResultVO.success(param.page(() -> adminService.list()));
-    }
-
-    @GetMapping("/get")
-    public SmAdmin get() {
-        LambdaQueryWrapper<SmAdmin> queryWrapper = Wrappers.lambdaQuery();
-        return adminService.getOne(queryWrapper);
+        return ResultVO.success(param.page(() -> service.list()));
     }
 
 }

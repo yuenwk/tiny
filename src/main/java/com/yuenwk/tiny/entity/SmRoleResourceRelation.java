@@ -3,6 +3,7 @@ package com.yuenwk.tiny.entity;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.yuenwk.common.mybatis.BaseDomain;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -11,7 +12,7 @@ import java.io.Serializable;
 
 /**
  * <p>
- * 
+ *
  * </p>
  *
  * @author yuenwk
@@ -20,7 +21,7 @@ import java.io.Serializable;
 @Getter
 @Setter
 @TableName("sm_role_resource_relation")
-public class SmRoleResourceRelation implements Serializable {
+public class SmRoleResourceRelation extends BaseDomain implements Serializable {
 
     @Serial
     private static final long serialVersionUID = 1L;

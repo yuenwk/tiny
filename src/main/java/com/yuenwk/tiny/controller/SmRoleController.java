@@ -1,5 +1,8 @@
 package com.yuenwk.tiny.controller;
 
+import com.yuenwk.common.mybatis.BaseController;
+import com.yuenwk.tiny.entity.SmRole;
+import com.yuenwk.tiny.service.ISmRoleService;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -13,6 +16,6 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/sm/role")
-public class SmRoleController {
+public class SmRoleController extends BaseController<SmRole, ISmRoleService> {
 
 }

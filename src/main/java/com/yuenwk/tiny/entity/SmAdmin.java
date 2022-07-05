@@ -3,6 +3,7 @@ package com.yuenwk.tiny.entity;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.yuenwk.common.mybatis.BaseDomain;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -21,7 +22,7 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @TableName("sm_admin")
-public class SmAdmin implements Serializable {
+public class SmAdmin extends BaseDomain implements Serializable {
 
     @Serial
     private static final long serialVersionUID = 1L;

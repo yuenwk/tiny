@@ -1,5 +1,8 @@
 package com.yuenwk.tiny.controller;
 
+import com.yuenwk.common.mybatis.BaseController;
+import com.yuenwk.tiny.entity.SmResource;
+import com.yuenwk.tiny.service.ISmResourceService;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -13,6 +16,6 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/sm/resource")
-public class SmResourceController {
+public class SmResourceController extends BaseController<SmResource, ISmResourceService> {
 
 }

@@ -1,9 +1,9 @@
 package com.yuenwk.tiny.service.impl;
 
+import com.yuenwk.common.mybatis.BaseServiceImpl;
 import com.yuenwk.tiny.entity.SmResourceCategory;
 import com.yuenwk.tiny.mapper.SmResourceCategoryMapper;
 import com.yuenwk.tiny.service.ISmResourceCategoryService;
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
 /**
@@ -15,6 +15,6 @@ import org.springframework.stereotype.Service;
  * @since 2022-07-03
  */
 @Service
-public class SmResourceCategoryServiceImpl extends ServiceImpl<SmResourceCategoryMapper, SmResourceCategory> implements ISmResourceCategoryService {
+public class SmResourceCategoryServiceImpl extends BaseServiceImpl<SmResourceCategoryMapper, SmResourceCategory> implements ISmResourceCategoryService {
 
 }
