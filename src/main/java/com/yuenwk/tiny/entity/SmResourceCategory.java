@@ -32,7 +32,7 @@ public class SmResourceCategory extends BaseDomain implements Serializable {
 
     private String name;
 
-    private Short sort;
+    private Integer sort;
 
     private LocalDateTime createTime;
 }

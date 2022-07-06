@@ -36,7 +36,7 @@ public class SmRole extends BaseDomain implements Serializable {
 
     private String description;
 
-    private Short status;
+    private Integer status;
 
     private Integer sort;
 

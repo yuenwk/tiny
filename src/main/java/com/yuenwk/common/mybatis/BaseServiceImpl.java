@@ -5,6 +5,8 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.yuenwk.common.api.ResultCode;
+import com.yuenwk.common.exception.ApiException;
 
 public abstract class BaseServiceImpl<M extends BaseMapper<T>, T extends BaseDomain> extends ServiceImpl<M, T> implements IBaseService<T> {
 
@@ -40,25 +42,21 @@ public abstract class BaseServiceImpl<M extends BaseMapper<T>, T extends BaseDom
             return false;
         } catch (Exception e) {
             log.error(e.getMessage());
-//            throw new RuntimeException(ResultCode.FAILED);
-            return false;
+            throw new ApiException(ResultCode.FAILED);
         }
     }
 
     @Override
     public T get(Long id) {
         T domain = super.getById(id);
-//        if (null == domain) {
-//            throw new AppException(ResultCode.RESULT_DATA_NONE);
-//        }
+        if (null == domain) {
+            throw new ApiException(ResultCode.RESULT_DATA_NONE);
+        }
         return domain;
     }
 
     /**
      * 检查 ID 是否存在
-     *
-     * @param id {@code Long} ID
-     * @return {@code boolean} ID 不存在则抛出异常
      */
     @Override
     public boolean checkId(Long id) {

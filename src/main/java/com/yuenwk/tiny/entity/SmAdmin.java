@@ -45,7 +45,7 @@ public class SmAdmin extends BaseDomain implements Serializable {
     /**
      * 帐号启用状态：0->禁用；1->启用
      */
-    private Short status;
+    private Integer status;
 
     private LocalDateTime loginTime;
 

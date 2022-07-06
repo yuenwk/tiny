@@ -6,6 +6,7 @@ import com.baomidou.mybatisplus.annotation.TableName;
 import com.yuenwk.common.mybatis.BaseDomain;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.experimental.Accessors;
 
 import java.io.Serial;
 import java.io.Serializable;
@@ -21,6 +22,7 @@ import java.time.LocalDateTime;
  */
 @Getter
 @Setter
+@Accessors(chain = true)
 @TableName("sm_menu")
 public class SmMenu extends BaseDomain implements Serializable {
 
@@ -34,15 +36,15 @@ public class SmMenu extends BaseDomain implements Serializable {
 
     private String title;
 
-    private Short level;
+    private Integer level;
 
-    private Short sort;
+    private Integer sort;
 
     private String name;
 
     private String icon;
 
-    private Short hidden;
+    private Integer hidden;
 
     private LocalDateTime createTime;
 }
