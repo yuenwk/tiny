@@ -1,1 +1,4 @@
 rootProject.name = 'tiny'
+include 'common'
+include 'system'
+

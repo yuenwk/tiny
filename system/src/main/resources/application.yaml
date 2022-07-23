@@ -1,0 +1,24 @@
+
+
+
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://192.168.174.123:5432/tiny
+    username: postgres
+    password: n8l8C0sq2PIj
+
+mybatis-plus:
+  global-config:
+    banner: false
+  mapper-locations: classpath*:/mapper/**/*.xml
+
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: false
+
+pagehelper:
+  helperDialect: postgresql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
